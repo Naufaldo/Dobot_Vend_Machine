@@ -6,7 +6,6 @@ This document describes the secondary development environment building and demo 
 
 <div align=center>
 
-<img src="images/pythondemo.png" width="500" height="350" />
 
 </div>
 
