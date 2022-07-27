@@ -10,7 +10,7 @@ CON_STR = {
 
 api = dType.load()
 # connect dobot usb to pc
-state = dType.ConnectDobot(api, "COM3", 115200)[0]
+state = dType.ConnectDobot(api, "COM5", 115200)[0]
 
 a=0
 # b=0
@@ -84,14 +84,14 @@ if (state == dType.DobotConnect.DobotConnect_NoError):
     dType.SetPTPCoordinateParams(api, 100, 100, 100, 100,1)
 
     while True:
-        x = ser.read()
-        if x == ('1'.encode('utf-8')):
-            if a==0:
-                screensaver()
-                a=1
+      #  x = ser.read()
+       # if x == ('1'.encode('utf-8')):
+        #    if a==0:
+         #       screensaver()
+          #      a=1
 
 #Ini waktu ke trigger payment  u1 dobot ya kang
-            # cone_loader()
+             cone_loader()
             # pre_cone()
             # circle()
             # home()

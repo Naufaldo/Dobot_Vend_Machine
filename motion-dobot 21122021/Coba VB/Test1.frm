@@ -13,6 +13,16 @@ Begin VB.Form Form1
    ScaleMode       =   0  'User
    ScaleWidth      =   1280
    StartUpPosition =   2  'CenterScreen
+   Begin VB.CommandButton Command3 
+      BackColor       =   &H000000FF&
+      Height          =   255
+      Left            =   18720
+      MaskColor       =   &H000000FF&
+      Style           =   1  'Graphical
+      TabIndex        =   2
+      Top             =   10440
+      Width           =   375
+   End
    Begin VB.CommandButton Command2 
       BackColor       =   &H80000001&
       DisabledPicture =   "Test1.frx":18841
@@ -70,11 +80,19 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+
+
 Private Sub Command1_Click()
-MSComm1.Output = "9"
+    MSComm1.Output = "2"
 End Sub
+
 Private Sub Command2_Click()
-MSComm1.Output = "1"
+    MSComm1.Output = "1"
+
+End Sub
+
+Private Sub Command3_Click()
+    MSComm1.Output = "3"
 End Sub
 
 Private Sub Form_Load()
@@ -82,6 +100,7 @@ Private Sub Form_Load()
        MSComm1.PortOpen = True
        MSComm1.Output = "0"
     End If
+    
 
 End Sub
 
